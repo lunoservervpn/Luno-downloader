@@ -121,9 +121,6 @@ async function loadDownloads() {
             
             container.appendChild(downloadItem);
         });
-        
-        // Добавляем поиск
-        setupSearch();
     } catch (error) {
         console.error('Ошибка:', error);
         const container = document.getElementById('downloads-list');
@@ -134,27 +131,6 @@ async function loadDownloads() {
             </div>
         `;
     }
-}
-
-// Настраиваем поиск по файлам
-function setupSearch() {
-    const searchInput = document.getElementById('search-input');
-    const downloadItems = document.querySelectorAll('.download-item');
-    
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        
-        downloadItems.forEach(item => {
-            const title = item.querySelector('h3').textContent.toLowerCase();
-            const description = item.querySelector('.file-description')?.textContent.toLowerCase() || '';
-            
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    });
 }
 
 // Инициализация
