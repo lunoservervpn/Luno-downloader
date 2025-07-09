@@ -76,41 +76,6 @@ body {
     font-size: 1.1rem;
 }
 
-.search-box {
-    position: relative;
-    margin: 25px 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.search-box i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--primary-light);
-}
-
-.search-box input {
-    width: 100%;
-    padding: 12px 20px 12px 45px;
-    border-radius: 30px;
-    border: none;
-    background-color: rgba(60, 20, 100, 0.5);
-    color: white;
-    font-size: 1rem;
-    outline: none;
-    border: 1px solid rgba(156, 100, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.search-box input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(156, 100, 255, 0.3);
-    background-color: rgba(80, 40, 120, 0.6);
-}
-
 .downloads-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
